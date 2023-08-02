@@ -20,5 +20,7 @@ namespace Blog.Models
 
         [Write(false)]
         public List<Role> Roles { get; set; }
+
     }
+
 }
