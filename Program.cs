@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using Blog.Models;
 using Blog.Repositories;
 using Blog.Screens.TagScreens;
+using Blog.Screens.UserScreens;
 using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 
@@ -18,7 +20,9 @@ namespace Blog
             Load();
             Console.ReadKey();
             Database.Connection.Close();
+
         }
+
 
         private static void Load()
         {
@@ -38,6 +42,9 @@ namespace Blog
 
             switch (option)
             {
+                case 1:
+                    MenuUserScreen.Load();
+                    break;
                 case 4:
                     MenuTagScreen.Load();
                     break;
